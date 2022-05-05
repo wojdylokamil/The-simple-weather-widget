@@ -127,46 +127,26 @@ body {
       padding-top: 25px;
 }
 
-.today-info {
-      padding: 15px;
-      margin: 0 25px 25px 25px;
-      /* 	box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25); */
-      border-radius: 10px;
-}
-
-.today-info>div:not(:last-child) {
-      margin: 0 0 10px 0;
-}
-
-.today-info>div .title {
-      float: left;
-      font-weight: 700;
-}
-
-.today-info>div .value {
-      float: right;
-}
-
-.week-list {
+.stats-list {
       list-style-type: none;
       padding: 0;
       margin: 10px 35px;
       -webkit-box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
       box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
       border-radius: 10px;
+      margin-bottom: 50px;
 }
 
-.week-list>li {
+.stats-list>li {
       float: left;
-      padding: 15px;
+      padding: 30px;
       cursor: pointer;
       -webkit-transition: 200ms ease;
       -o-transition: 200ms ease;
       transition: 200ms ease;
-      border-radius: 10px;
+      border-radius: 20px;
 }
-
-.week-list>li:hover {
+.stats-list>li:hover {
       -webkit-transform: scale(1.1);
       -ms-transform: scale(1.1);
       transform: scale(1.1);
@@ -176,26 +156,20 @@ body {
       box-shadow: 0 0 40px -5px rgba(0, 0, 0, 0.2)
 }
 
-.week-list>li.active {
-      background: #fff;
-      color: #222831;
-      border-radius: 10px;
-}
-
-.week-list>li .day-name {
+.stats-list>li .day-name {
       display: block;
       margin: 10px 0 0 0;
       text-align: center;
 }
 
-.week-list>li .day-icon {
+.stats-list>li .day-icon {
       display: block;
-      height: 30px;
+      height: 40px;
       width: auto;
       margin: 0 auto;
 }
 
-.week-list>li .day-temp {
+.stats-list>li .day-temp {
       display: block;
       text-align: center;
       margin: 10px 0 0 0;
@@ -238,4 +212,35 @@ body {
       height: 1em;
       width: auto;
       margin-right: 5px;
+}
+
+.form__field {
+  font-family: inherit;
+  width: 60%;
+  border: 0;
+  border-bottom: 2px solid gray;
+  outline: 0;
+  font-size: 1.3rem;
+  color: white;
+  background: transparent;
+  transition: border-color 0.2s;
+}
+
+placeholder {
+    color: transparent;
+  }
+
+  placeholder-shown ~ .form__label {
+    font-size: 1.3rem;
+    cursor: text;
+    top: 20px;
+  }
+
+.form__label {
+  position: absolute;
+  top: 0;
+  display: block;
+  transition: 0.2s;
+  font-size: 1rem;
+  color: gray;
 }

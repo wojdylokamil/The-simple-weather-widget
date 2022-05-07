@@ -8,7 +8,7 @@ $cities = json_decode(curl_exec($ch), true);
 curl_close($ch);
 
 $citiesNames = array();
-$error = '';
+$errorMessage = '';
 
 
 foreach ($cities as $city) {
@@ -29,6 +29,6 @@ if (isset($_POST['changeCity']) && $_POST['searchingCity'] !== '') {
       };
       if (!in_array($searchingCity, $citiesNames)) {
             $city = '';
-            $error = "City not founded";
+            $errorMessage = "City not founded";
       };
 };
